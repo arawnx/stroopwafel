@@ -13,7 +13,7 @@
 
 void addstr_center(char* s, int y_off, int x_off) {
     int y = LINES / 2-1 + y_off;
-    int x = (COLS / 2) - (strlen(s) / 2) + x_off;
+    int x = (COLS / 2) + x_off;
     mvaddstr(y, x, s);
 }
 
@@ -80,11 +80,11 @@ float isochronic() {
 
         c = random_color_name();
         switch_color(c);
-        addstr_center(c, i-(LINES/2)+1, -20);
+        addstr_center(c, i-(LINES/2)+1, -23);
 
         c = random_color_name();
         switch_color(c);
-        addstr_center(c, i-(LINES/2)+1, 20);
+        addstr_center(c, i-(LINES/2)+1, 17);
     }
 
     getch();
@@ -105,12 +105,12 @@ float anisochronic() {
         c = random_color_name();
         switch_color(c);
         c = random_color_name();
-        addstr_center(c, i-(LINES/2)+1, -20);
+        addstr_center(c, i-(LINES/2)+1, -23);
 
         c = random_color_name();
         switch_color(c);
         c = random_color_name();
-        addstr_center(c, i-(LINES/2)+1, 20);
+        addstr_center(c, i-(LINES/2)+1, 17);
     }
 
     getch();
@@ -142,7 +142,8 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    addstr_center("Press any key after having read INSTRUCTIONS.md...", 0, 0);
+    char* c = "Press any key after having read INSTRUCTIONS.md...";
+    addstr_center(c, 0, -1 * strlen(c)/2);
     getch();
 
     clear();
