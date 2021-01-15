@@ -142,7 +142,7 @@ int main(int argc, char** argv) {
         return -1;
     }
 
-    char* c = "Press any key after having read INSTRUCTIONS.md...";
+    char* c = "Press any key after having read README.md...";
     addstr_center(c, 0, -1 * strlen(c)/2);
     getch();
 
@@ -156,7 +156,7 @@ int main(int argc, char** argv) {
 
     endwin();
 
-    printf("ISOCHRONIC: %f\nANISOCHRONIC: %f\nRATIO: %f", isotime, anisotime, (anisotime / isotime));
+    printf("ISOCHRONIC: %.0f\nANISOCHRONIC: %.0f\nRATIO: %.2f\n", isotime, anisotime, (anisotime / isotime));
 
     return 0;
 }
