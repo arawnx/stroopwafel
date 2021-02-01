@@ -1,3 +1,6 @@
+# Images
+![Isochromatic](assets/res1.png)
+![Anisochromatic](assets/res2.png)
 # How to Play:
 You will be shown three screens. The first prompts you to read these rules. The second displays three rows of color words, written in their designated color (e.g. "RED" written in red, "BLUE" in blue, &c.). The latter screen displays the same three rows, except the words and the colors they're written in are discordant (e.g. "RED" written in green, "BLUE" written in magenta, &c.).
 
